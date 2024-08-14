@@ -8,19 +8,4 @@ class navegationBarModel {
     }
 }
 
-const navBarData = [
-    new navegationBarModel({
-        label: 'Paciente',
-        path: '/Paciente',
-        icon: <FaHospitalUser/>,
-        className: 'navbar-patient',
-        pageComponent: <PatientPage />
-    }),
-    new navegationBarModel({
-        label: 'Tratamento',
-        path: '/Tratamento',
-        icon: <FaFileWaveform/>,
-        className: 'navbar-treatment',
-        pageComponent: <TreatmentPage />
-    })
-];
+export default navegationBarModel;
