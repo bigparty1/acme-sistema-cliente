@@ -29,3 +29,5 @@ class Paciente {
         this.ativo = ativo;
     }  
 }
+
+export default Paciente;
