@@ -1,0 +1,63 @@
+.component-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 25px;
+    overflow: hidden;
+    border: none;
+    font-size: 18px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.component-table thead tr {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.component-table th, .component-table td {
+    padding: 12px 15px;
+    border: none;
+    text-align: center;
+}
+
+.component-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.component-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.component-table button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 5px;
+    transition: transform 0.2s;
+}
+
+.component-table button:hover .icon {
+    transform: scale(1.2);
+}
+
+.component-table-actions-column {
+    text-align: center;
+    width: 80px;
+}
+
+.component-table thead th {
+    border-right: 1px solid #ddd;
+}
+
+.component-table thead th:last-child {
+    border-right: none;
+}
+
+.selected {
+    background-color: #7ea4c5 !important;
+}
