@@ -6,7 +6,9 @@ import navegationBarData from '../../data/navegationBarData';
 
 export default function Main() {
 
-    const [currentPage, setCurrentPage] = useState(navegationBarData[0]);
+    let initialPageIndex = 0;
+
+    const [currentPage, setCurrentPage] = useState(navegationBarData[initialPageIndex]);
 
     const handleRouteChange = (page) => {
         setCurrentPage(page);
@@ -16,8 +18,9 @@ export default function Main() {
         <div className='main-page'>
             <NavegationBar title="ACME" 
                     subTitle="Sistema de Gestão de Tratamentos" 
+                    navbarData={navegationBarData}
+                    initialPage={initialPageIndex}
                     onRouteChange={handleRouteChange}
-                    initalPage={0}
             />
 
             <div className='page-content'>
