@@ -1,0 +1,39 @@
+.component-table-navegation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.component-table-navegation button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.component-table-navegation button:hover {
+    background-color: #0056b3;
+}
+
+.component-table-navegation .icon {
+    font-size: 16px;
+}
+
+.component-table-navegation-page-label {
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.component-table-navegation-container {
+    height: calc(100vh - 220px);
+    overflow: auto;
+}
