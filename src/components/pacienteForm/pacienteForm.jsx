@@ -54,9 +54,9 @@ export default function PacienteForm({ pacienteData = {}, onCancel, onSave }) {
     };
 
     return (
-        <div className='component-patient-form'>
+        <div className='component-patiente-form'>
             <FormHeader title={'Paciente'} icon={<FaHospitalUser className='icon' />} onClose={onCancel} />
-            <form className='component-patient-form-form'>
+            <form className='component-patiente-form-form'>
                 <label>Nome</label>
                 <input type='text' name='name' value={paciente.nome} onChange={handleChange} />
                 <label>CPF</label>

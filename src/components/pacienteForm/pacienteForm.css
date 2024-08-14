@@ -1,0 +1,41 @@
+.component-patiente-form {
+    width: 600px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.component-patiente-form-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.component-patiente-form-form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.component-patiente-form-form input[type="text"],
+.component-patiente-form-form input[type="date"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    display: block;
+}
+
+.component-patiente-form-form input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.component-patiente-form-form input[type="radio"]:checked + label {
+    font-weight: bold;
+}
