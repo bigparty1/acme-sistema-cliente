@@ -1,4 +1,4 @@
-.botao {
+.component-button {
     background-color: #007bff;
     color: #fff;
     padding: 20px;
@@ -11,10 +11,10 @@
     transition: background-color 0.2s;
 }
 
-.botao:hover {
+.component-button:hover {
     background-color: #0056b3;
 }
 
-.botao:active {
+.component-button:active {
     background-color: #003080;
 }
