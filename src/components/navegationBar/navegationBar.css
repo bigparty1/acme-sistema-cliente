@@ -1,0 +1,57 @@
+.component-navbar {
+    width: 250px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.component-navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.component-navbar-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.component-navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.component-navbar-menu-item {
+    margin-bottom: 10px;
+}
+
+.component-navbar-menu-item span {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.component-navbar-menu-item span .component-navbar-icon {
+    margin-right: 10px;
+}
+
+.component-navbar-menu-item span:hover {
+    background-color: #e9ecef;
+}
+
+.component-navbar-menu-item span.active {
+    background-color: #007bff;
+    color: white;
+}
