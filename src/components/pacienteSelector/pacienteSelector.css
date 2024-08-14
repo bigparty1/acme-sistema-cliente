@@ -1,0 +1,46 @@
+.component-patiente-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.component-patiente-selector .icon {
+    margin-right: 8px;
+}
+
+.component-patiente-selector .form-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.component-patiente-selector .search-bar {
+    width: 92%;
+    margin-bottom: 20px;
+}
+
+.component-patiente-selector .table-container {
+    width: 95%;
+    margin-bottom: 20px;
+    /* width: 100%; */
+    max-height: auto;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+ 
+.component-patiente-selector .form-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
