@@ -1,10 +1,8 @@
-import './navegationBarModel';
-
 import { FaHospitalUser } from "react-icons/fa";
 import { FaFileWaveform } from "react-icons/fa6";
 
-import PacientePage from '../../pages/pacientePage/pacientePage.jsx';
-import TratamentoPage from '../../pages/tratamentopage/tratamentopage.jsx';
+import PacientePage from '../pages/pacientePage/pacientePage.jsx';
+import TratamentoPage from '../pages/tratamentoPage/tratamentoPage.jsx';
 
 import NavegationBarModel from '../components/navegationBar/navegationBarModel';
 
