@@ -12,7 +12,7 @@ class Paciente {
         cidade = '',
         bairro = '',
         rua = '',
-        complemente = '',
+        complemento = '',
         ativo = true
     }) {
 
@@ -25,7 +25,7 @@ class Paciente {
         this.cidade = cidade;
         this.bairro = bairro;
         this.rua = rua;
-        this.complemente = complemente;
+        this.complemento = complemento;
         this.ativo = ativo;
     }  
 }
