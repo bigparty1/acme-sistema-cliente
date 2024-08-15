@@ -1,6 +1,7 @@
 import  './pacienteForm.css';
 
 import React, { useState } from 'react';
+import { FaHospitalUser } from 'react-icons/fa6';
 import FormHeader from '../formHeader/formHeader';
 import FormFooter from '../formFooter/formFooter';
 
@@ -39,9 +40,9 @@ export default function PacienteForm({ pacienteData = {}, onCancel, onSave }) {
     
     const handleChange = (event) => {
         const { name, value, type, checked } = event.target;
-        setPatient({ 
-            ...patient, 
-            [name]: type === 'radio' ? (checked ? value : patient[name]) : value 
+        setPaciente({ 
+            ...paciente, 
+            [name]: type === 'radio' ? (checked ? value : paciente[name]) : value 
         });
     };
 
@@ -58,7 +59,7 @@ export default function PacienteForm({ pacienteData = {}, onCancel, onSave }) {
             <FormHeader title={'Paciente'} icon={<FaHospitalUser className='icon' />} onClose={onCancel} />
             <form className='component-patiente-form-form'>
                 <label>Nome</label>
-                <input type='text' name='name' value={paciente.nome} onChange={handleChange} />
+                <input type='text' name='nome' value={paciente.nome} onChange={handleChange} />
                 <label>CPF</label>
                 <input type='text' 
                     name='cpf' 
@@ -68,7 +69,7 @@ export default function PacienteForm({ pacienteData = {}, onCancel, onSave }) {
                     maxLength="14" 
                 />
                 <label>Data de Nascimento</label>
-                <input type='date' name='birthDate' value={patient.birthDate} onChange={handleChange} />
+                <input type='date' name='nascimento' value={paciente.nascimento} onChange={handleChange} />
                 <label>CEP</label>
                 <input type='text' 
                     name='zipCod' 
@@ -80,27 +81,27 @@ export default function PacienteForm({ pacienteData = {}, onCancel, onSave }) {
                 <label>Sexo Biológico</label>
                 <div className='radio-group'>
                     <input type='radio' 
-                        name='biologicalSex' 
+                        name='sexo' 
                         value={Sexo.Masculino} 
                         checked={paciente.sexo == Sexo.Masculino} 
                         onChange={handleChange} 
                     /> <label>Masculino</label>
                     <input 
                         type='radio' 
-                        name='biologicalSex' 
+                        name='sexo' 
                         value={Sexo.Feminino} 
                         checked={paciente.sexo == Sexo.Feminino} 
                         onChange={handleChange} 
                     /> <label>Feminino</label>
                 </div>
                 <label>Cidade</label>
-                <input type='text' name='city' value={paciente.cidade} onChange={handleChange} />
+                <input type='text' name='cidade' value={paciente.cidade} onChange={handleChange} />
                 <label>Bairro</label>
-                <input type='text' name='district' value={paciente.bairro} onChange={handleChange} />
+                <input type='text' name='bairro' value={paciente.bairro} onChange={handleChange} />
                 <label>Rua</label>
-                <input type='text' name='address' value={paciente.rua} onChange={handleChange} />
+                <input type='text' name='rua' value={paciente.rua} onChange={handleChange} />
                 <label>Complemento</label>
-                <input type='text' name='complement' value={paciente.complemente} onChange={handleChange} />
+                <input type='text' name='complemento' value={paciente.complemento} onChange={handleChange} />
             </form>
             <FormFooter onCancel={onCancel} onSave={() => onSave(paciente)} />
         </div>
