@@ -22,7 +22,7 @@ class PacienteServices {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(paciente)
+            body: JSON.stringify({...paciente, sexo: Number(paciente.sexo)})
         });
 
         if(!response.ok) {
@@ -37,7 +37,7 @@ class PacienteServices {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(paciente)
+            body: JSON.stringify({...paciente, sexo: Number(paciente.sexo)})
         });
 
         if(!response.ok) {
