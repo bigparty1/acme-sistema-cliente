@@ -15,7 +15,7 @@
     margin-right: 8px;
 }
 
-.component-patiente-selector .form-header {
+.component-patiente-selector .component-form-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     margin-bottom: 20px;
 }
 
-.component-patiente-selector .search-bar {
+.component-patiente-selector .component-search-bar {
     width: 92%;
     margin-bottom: 20px;
 }
@@ -31,14 +31,13 @@
 .component-patiente-selector .table-container {
     width: 95%;
     margin-bottom: 20px;
-    /* width: 100%; */
     max-height: auto;
     overflow-y: auto;
     margin-bottom: 20px;
     flex-grow: 1;
 }
  
-.component-patiente-selector .form-footer {
+.component-patiente-selector .component-form-footer {
     width: 100%;
     display: flex;
     justify-content: flex-end;
