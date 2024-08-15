@@ -1,4 +1,4 @@
-import './overlay.scss';
+import './overlay.css';
 import React from 'react';
 
 export default function Overlay({children, isVisible}) {
