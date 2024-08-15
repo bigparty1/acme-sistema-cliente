@@ -1,0 +1,41 @@
+.patient-page-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    height: 50px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.patient-page-header span {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.patient-page-content {
+    padding: 20px;
+}
+
+.patient-page-content .table-navegation-container {
+    margin-top: 20px;
+}
+
+.patient-page-content-search-addbtn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.patient-page-content-search-addbtn .component-search-bar {
+    flex: 1;
+}
+
+.patient-page-content-search-addbtn .component-button {
+    margin-left: 10px;
+}
+
+.patient-page-content .component-toogle-button {
+    margin-left: 10px;
+}
