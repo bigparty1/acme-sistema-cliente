@@ -1,7 +1,7 @@
 import './pacienteSelector.css';
 
 import  React, { useState } from 'react';
-import { faHospitalUser } from "react-icons/fa";
+import { FaHospitalUser } from "react-icons/fa";
 import FormHeader from '../formHeader/formHeader';
 import FormFooter from '../formFooter/formFooter';
 import SearchBar from '../searchBar/searchBar';
@@ -9,7 +9,8 @@ import Table from '../table/table';
 
 import Paciente from '../../data/models/entities/paciente';
 
-//TODO: Importação de pacienteserviços para requisições
+import PacienteServices from '../../services/pacienteServices';
+const pacienteServices = new PacienteServices();
 
 export default function PacienteSelector({ onSelect, onCancel }) 
 {
@@ -37,7 +38,8 @@ export default function PacienteSelector({ onSelect, onCancel })
         }
 
         try {
-            //TODO: Pegar dados 
+            const response = await pacienteServices.getPacientes(searchTerm, true, 1, 50);
+            setPacientes(response.items.map(item => ({paciente: new Paciente(item), Nome: item.nome, CPF: item.cpf})));
         
         } catch (error) {
  
@@ -46,7 +48,7 @@ export default function PacienteSelector({ onSelect, onCancel })
     };
 
     const  handleSelect = (index) => {
-        setPaciente(pacientes[index]);
+        setPaciente(pacientes[index].paciente);
     };
 
     return (
