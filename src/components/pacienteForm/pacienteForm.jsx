@@ -50,6 +50,9 @@ export default function PacienteForm({ pacienteData = {}, onCancel, onSave }) {
         if (event.key === 'Tab' || event.key === 'Backspace') 
             return;
 
+        if(event.key === 'ArrowLeft' || event.key === 'ArrowRight')
+            return;
+
         if(!/[0-9]/.test(event.key))
             event.preventDefault();
     };
