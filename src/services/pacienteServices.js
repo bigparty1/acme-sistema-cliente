@@ -1,7 +1,8 @@
 class PacienteServices {
 
     constructor() {
-        this.acmeSistemaAPI = process.env.REACT_APP_ACME_SISTEMA_API;
+        // this.acmeSistemaAPI = process.env.REACT_APP_ACME_SISTEMA_API;
+        this.acmeSistemaAPI = 'http://acmesistema.servehttp.com:90';
     }
 
     async getPacientes(prefix, status, page, pageSize) {
