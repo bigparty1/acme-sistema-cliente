@@ -166,7 +166,7 @@ export default function PacientePage() {
             <div className='patient-page-content'>
 
                 <div className='patient-page-content-search-addbtn'>  
-                    <SearchBar placeholder='Digite o nome do paciente'
+                    <SearchBar placeholder='Digite o nome do paciente ou CPF'
                                 value={search}
                                 onChange={onSearchChange}
                                 onClick={onSearch}

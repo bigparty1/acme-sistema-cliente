@@ -54,7 +54,7 @@ export default function PacienteSelector({ onSelect, onCancel })
     return (
         <div className='component-patiente-selector'>
             <FormHeader title={'Selecionar Paciente'} icon={<FaHospitalUser className='icon' />} onClose={onCancel} />
-            <SearchBar placeholder='Digite o nome do paciente'  onClick={handleSubmit} value={searchTerm} onChange={handleInputChange}/>
+            <SearchBar placeholder='Digite o nome do paciente ou CPF'  onClick={handleSubmit} value={searchTerm} onChange={handleInputChange}/>
             <div className='table-container'>
                 <Table 
                     columns={['Nome', 'CPF']}
