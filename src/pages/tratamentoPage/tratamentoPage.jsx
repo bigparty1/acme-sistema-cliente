@@ -25,7 +25,7 @@ export default function TratamentoPage() {
     const [tratamento, setTratamento] = useState(new Tratamento({}));
     const [tratamentos, setTratamentos] = useState([]);
     const [isNewTratamento, setIsNewTratamento] = useState(false);
-    const [pageSize, setPageSize] = useState(10);
+    const [pageSize, setPageSize] = useState(15);
     const [totalPages, setTotalPages] = useState(1);
     const [currentPage, setCurrentPage] = useState(1);
     const [actionButtonData, setActionButtonData] = useState([]);
@@ -48,7 +48,7 @@ export default function TratamentoPage() {
 
     const onAddTratamento = () => {
         setIsNewTratamento(true);
-        setIsTratamentoFormVisible(true);
+        setIsPacienteSelectorVisible(true);
     };
 
     const onCancelTratamentoForm = () => {
@@ -69,9 +69,9 @@ export default function TratamentoPage() {
     const onInativate = async (obj) => {
         try {
             let tratamento = obj.tratamento;
-            tratamento.active = false;
-            await tratamentoServices.update(tratamento);
-            // await updateTratamentos();
+            tratamento.ativo = false;
+            await tratamentoServices.updateTratamento(tratamento);
+            getTratamentos();
         } catch (error) {
             console.error(error);
         }
@@ -80,9 +80,9 @@ export default function TratamentoPage() {
     const onActivate = async (obj) => {
         try {
             let tratamento = obj.tratamento;
-            tratamento.active = true;
-            await tratamentoServices.update(tratamento);
-            // await updateTratamentos();
+            tratamento.ativo = true;
+            await tratamentoServices.updateTratamento(tratamento);
+            getTratamentos();
         } catch (error) {
             console.error(error);
         }
@@ -105,12 +105,15 @@ export default function TratamentoPage() {
             if(tratamento.idTratamento) { //update
                 await tratamentoServices.updateTratamento(tratamento);
                 setIsTratamentoFormVisible(false);
+                alert('Tratamento atualizado com sucesso!');
             }
             else  //create
             {
                 await tratamentoServices.createTratamento(tratamento);
                 setIsTratamentoFormVisible(false);
+                alert('Tratamento criado com sucesso!');
             }
+            getTratamentos();
         } catch (error) {
             console.error(error);
         }
@@ -118,7 +121,7 @@ export default function TratamentoPage() {
 
     const getTratamentos = async () => {
         
-        if(!paciente)
+        if(paciente.idPaciente === 0)
             return;
         
         try {
@@ -129,7 +132,15 @@ export default function TratamentoPage() {
                 tratamento: new Tratamento({...item, 
                                             paciente: paciente,
                                             data: LocalISOTime(item.data).slice(0, 16)}),
-                Data: new Date(item.nascimento).toLocaleDateString(),
+                Data: new Date(item.data).toLocaleString('pt-BR', 
+                    { 
+                        day: '2-digit', 
+                        month: '2-digit', 
+                        year: 'numeric', 
+                        hour: '2-digit', 
+                        minute: '2-digit', 
+                        hour12: false 
+                    }),
                 Descrição: item.descricao.substring(0, 60).replace('\n', ' ') + '...' })));
         } catch (error) {
             console.error(error);
@@ -229,6 +240,8 @@ export default function TratamentoPage() {
                     data={tratamentos}
                     showActionButton={true}
                     actionButtonData={actionButtonData}
+                    totalPages={totalPages}
+                    currentPage={currentPage}
                     onNext={onNextPage}
                     onPrev={onPrevPage}
                     onFirst={onFirstPage}
