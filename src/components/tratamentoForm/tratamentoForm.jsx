@@ -14,7 +14,7 @@ export default function TratamentoForm({ tratamentoData = new Tratamento(), onCa
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-        setTratamento({ ...Tratamento, [name]: value });
+        setTratamento({ ...tratamento, [name]: value });
     };
 
     const getCurrentDateTime = () => {
@@ -27,9 +27,9 @@ export default function TratamentoForm({ tratamentoData = new Tratamento(), onCa
             <form className='component-tratamento-form-form'>
                 <label>Paciente: {tratamento.paciente.nome}</label>
                 <label>Data</label>
-                <input type='datetime-local' name='date' value={tratamento.data} max={getCurrentDateTime} onChange={handleChange} />
+                <input type='datetime-local' name='data' value={tratamento.data} max={getCurrentDateTime} onChange={handleChange} />
                 <label>Descrição</label>
-                <textarea name='description' value={tratamento.descricao} onChange={handleChange} />
+                <textarea name='descricao' value={tratamento.descricao} onChange={handleChange} />
             </form>
             <FormFooter onCancel={onCancel} onSave={() => onSave(tratamento)} />
         </div>
