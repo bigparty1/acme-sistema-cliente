@@ -12,10 +12,10 @@ export default function TableNavegation({columns, data, showActionButton = false
                 <Table 
                     columns={columns}
                     data={data}
-                    showActionBtn={showActionButton}
+                    showActionButton={showActionButton}
                     canSelectRow={canSelectRow}
                     onRowSelect={onRowSelect}
-                    actionBtnData={actionButtonData}
+                    actionButtonData={actionButtonData}
                 />
             </div>
             
