@@ -1,0 +1,66 @@
+.treatment-page-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    height: 50px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.treatment-page-header span {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.treatment-page-content {
+    padding: 20px;
+}
+
+.treatment-page-content .component-table-navegation-container {
+    margin-top: 20px;
+}
+
+.treatment-page-filters {
+    display: flex;
+    gap: 12px;
+}
+
+
+.treatment-page-patient-name {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.treatment-page-date-init,
+.treatment-page-date-end {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.treatment-page-date-end input[type="date"],
+.treatment-page-date-init input[type="date"] {
+    padding: 4px; 
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    font-size: 14px; 
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    color: #333; 
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.treatment-page-date-end input[type="date"]:focus,
+.treatment-page-date-init input[type="date"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+.treatment-page-label {
+    font-weight: bold;
+    font-size: 18px;
+}
