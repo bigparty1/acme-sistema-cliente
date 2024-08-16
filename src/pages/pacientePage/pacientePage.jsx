@@ -43,7 +43,10 @@ export default function PacientePage() {
                 { label: 'restore', icon: <FaTrashRestore className='icon'/>, action: onActivate, style: {fontSize: '18px', color: '#007bff'}, tooltip: 'Ativar Paciente' }
             ]);
         
-        onFirstPage();
+        if(currentPage > 1)
+            onFirstPage();
+        else
+            onSearch();
     }, [activeStatus]);
 
     const onSearchChange = (search) => {

@@ -192,7 +192,10 @@ export default function TratamentoPage() {
 
     useEffect(() => {
         updateTableButtons();
-        onFirstPage();
+        if(currentPage > 1)
+            onFirstPage();
+        else
+            getTratamentos();
     }, [active]);
 
     return (
