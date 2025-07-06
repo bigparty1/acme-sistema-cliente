@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# AcmeSistemaCliente
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este repositório contém o frontend do sistema de cadastro de pacientes e registro de tratamentos, desenvolvido como parte de um processo seletivo para desenvolvedor trainee.
 
-## Available Scripts
+## Contexto
 
-In the project directory, you can run:
+O objetivo deste projeto é prover uma interface web amigável para o sistema de cadastro de pacientes e registro de tratamentos, consumindo a API fornecida pelo backend ([AcmeSistemaServidor](https://github.com/bigparty1/AcmeSistemaServidor)). Com ele, é possível realizar as operações de cadastro, edição e consulta de pacientes e seus tratamentos de maneira intuitiva.
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Cadastro, listagem, atualização e remoção de pacientes.
+- Registro de tratamentos para pacientes cadastrados.
+- Listagem dos tratamentos associados a cada paciente.
+- Validação básica dos dados inseridos.
+- Integração completa com a API RESTful do backend.
+- Interface responsiva e de fácil utilização.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologias Utilizadas
 
-### `npm test`
+- **Linguagem:** JavaScript (ES6+)
+- **Framework:** React
+- **Gerenciador de pacotes:** npm
+- **HTTP Client:** fetch API
+- **Estilização:** CSS Modules
+- **Controle de rotas:** React Router Dom
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Principais Dependências
 
-### `npm run build`
+- `react`
+- `react-dom`
+- `react-router-dom`
+- `axios` (caso utilizado)
+- (Adicionar outras dependências relevantes do projeto)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como executar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone este repositório:**
+   ```bash
+   git clone https://github.com/bigparty1/acme-sistema-cliente.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd acme-sistema-cliente
+   ```
 
-### `npm run eject`
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+   ou
+   ```bash
+   yarn
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Configure a URL da API Backend:**
+   - Edite o arquivo `.env` ou equivalente, caso exista, para apontar para a URL do backend (`REACT_APP_API_URL=http://localhost:5000`).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. **Execute o projeto:**
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6. **Acesse no navegador:**
+   - O frontend estará disponível em: [http://localhost:3000](http://localhost:3000)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Estrutura do Projeto
 
-## Learn More
+```
+src/
+├── components/
+├── pages/
+├── services/
+├── routes/
+├── App.js
+├── index.js
+└── ...
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> A estrutura pode variar, ajuste conforme o padrão adotado no projeto.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Integração com o Backend
 
-### Code Splitting
+Este projeto consome a API RESTful disponibilizada pelo [AcmeSistemaServidor](https://github.com/bigparty1/AcmeSistemaServidor). Certifique-se de que o backend esteja rodando e acessível na URL configurada antes de utilizar o frontend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contribuição
 
-### Analyzing the Bundle Size
+Este projeto foi desenvolvido para fins avaliativos, mas sugestões e melhorias são bem-vindas!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Licença
 
-### Making a Progressive Web App
+Este projeto está sob a licença MIT.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Desenvolvido por [bigparty1](https://github.com/bigparty1) durante processo seletivo para desenvolvedor trainee.
